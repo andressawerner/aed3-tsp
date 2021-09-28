@@ -1,0 +1,13 @@
+{
+  "name": "tsp",
+  "version": "1.0.0",
+  "description": "Trabalho 1 - AED III - TSP",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-json-modules main.js"
+  },
+  "type": "module",
+  "author": "Andressa Werner",
+  "license": "ISC"
+}

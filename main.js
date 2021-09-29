@@ -4,27 +4,14 @@ import tsp3 from './data-js/tsp3_1194.js'
 import tsp4 from './data-js/tsp4_7013.js'
 import tsp5 from './data-js/tsp5_27603.js'
 
-import factorial from './assistants/factorial.js'
-import combinations from './assistants/combinations.js'
-import selectPath from './assistants/selectPath.js'
 import transformToMatriz from './assistants/transformToMatriz.js'
+import algoritmoExato from './algoritmoExato.js'
+import algoritmoAproximado from './algoritmoAproximado.js'
 
 const matriz = transformToMatriz(tsp2)
 
-const nodes = matriz.length
+algoritmoExato(matriz)
 
-const qtdNodos = nodes //11
-const qtdArestas = (Number(qtdNodos) * (Number(qtdNodos) - 1)) / 2
-const maxCombinacoes = factorial(qtdNodos - 1)
+//algoritmoAproximado(matriz)
 
-console.log(`Combinações a serem verificadas: ${maxCombinacoes}`)
-
-//matriz: Contém o map dos caminhos, do nodo 0 até o nodo n
-//combinacoes: Contém o número de combinações que terão de ser conferidas
-
-const combinacoes = combinations(qtdNodos, maxCombinacoes)
-
-const menorCaminho = selectPath(combinacoes, matriz)
-
-console.log(`Melhor caminho: ${menorCaminho.path}`)
-console.log(`Valor do melhor caminho: ${menorCaminho.value}`)
+//const qtdArestas = (Number(nodes) * (Number(nodes) - 1)) / 2

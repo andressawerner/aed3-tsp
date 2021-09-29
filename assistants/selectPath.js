@@ -20,10 +20,7 @@ function selectPath(combinations, map) {
     }
   })
 
-  console.log(`Melhor caminho: ${path}`)
-  console.log(`Valor do melhor caminho: ${value}`)
-
-  return 'result'
+  return { value: value, path: path }
 }
 
 export default selectPath

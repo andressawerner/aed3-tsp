@@ -10,7 +10,7 @@ function combinations(qtdNodos, factorial) {
   let i = 0
   while (i != maxCombinations) {
     let combination = ''
-    let disponiveis = envolved.slice(0)
+    let disponiveis = envolved.slice()
 
     for (let j = 0; j < envolved.length; j++) {
       /*let proxNodo = getRandomNode(0, qtdNodos - 1)
@@ -19,15 +19,14 @@ function combinations(qtdNodos, factorial) {
       }
 
       combination += proxNodo + ' '*/
-      let proxNodo = getRandomNode(0, qtdNodos - 1)
-      while (combination.includes(proxNodo)) {
-        proxNodo = getRandomNode(0, qtdNodos - 1)
-      }
+      let proxNodo = getRandomNode(0, disponiveis.length - 1)
+      const nodo = disponiveis.splice(proxNodo, 1)
+      //console.log(nodo)
 
-      combination += proxNodo + ' '
+      combination += nodo + ' '
     }
     combination = combination.slice(0, combination.length - 1)
-    console.log(`tentando combination`)
+    //console.log(combination)
     if (!combinations.includes(combination)) {
       console.log(`${i} combination`)
       combinations.push(combination)

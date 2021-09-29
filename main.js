@@ -3,20 +3,6 @@ import factorial from './assistants/factorial.js'
 import combinations from './assistants/combinations.js'
 import selectPath from './assistants/selectPath.js'
 
-const readline = require('readline')
-
-console.log(`Qual das entradas disponíveis gostaria de utilizar?
-1 - TSP 1
-2 - TSP 2
-3 - TSP 3
-4 - TSP 4
-5 - TSP 5
-
-Por favor, digite o número referente a sua escolha: `)
-
-const chooseTSP = readline()
-console.log('Escolheu ' + chooseTSP)
-
 const stringMatriz = `0    64  378 519 434 200 
 64  0    318 455 375 164 
 378 318 0    170 265 344 

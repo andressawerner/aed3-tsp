@@ -9,5 +9,6 @@
   },
   "type": "module",
   "author": "Andressa Werner",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }

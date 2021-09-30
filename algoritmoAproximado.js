@@ -1,19 +1,23 @@
-import factorial from './assistants/factorial.js'
-import combinations from './assistants/combinations.js'
 import selectPath from './assistants/selectPath.js'
+import minTree from './assistants/minTree.js'
+import contornandoTree from './assistants/contornandoTree.js'
 
 const algoritmoAproximado = matriz => {
   console.log('---------- ALGORITMO APROXIMADO ----------')
 
-  const nodes = matriz.length
-  const maxCombinacoes = factorial(nodes - 1)
-  console.log(`Combinações a serem verificadas: ${maxCombinacoes}`)
+  const tree = minTree(matriz)
+  console.log(tree)
 
-  const combinacoes = combinations(nodes, maxCombinacoes)
-  const menorCaminho = selectPath(combinacoes, matriz)
+  const caminhoContornado = contornandoTree(tree)
+  //const nodes = matriz.length
+  //const maxCombinacoes = factorial(nodes - 1)13andress
+  // console.log(`Combinações a serem verificadas: ${maxCombinacoes}`)
 
-  console.log(`Melhor caminho: ${menorCaminho.path}`)
-  console.log(`Valor do melhor caminho: ${menorCaminho.value}`)
+  //const combinacoes = combinations(nodes, maxCombinacoes)
+  //const menorCaminho = selectPath(tree.join(' '), matriz)
+
+  //console.log(`Melhor caminho: ${menorCaminho.path}`)
+  //console.log(`Valor do melhor caminho: ${menorCaminho.value}`)
 }
 
 export default algoritmoAproximado

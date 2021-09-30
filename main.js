@@ -12,6 +12,6 @@ const matriz = transformToMatriz(tsp2)
 
 algoritmoExato(matriz)
 
-//algoritmoAproximado(matriz)
+algoritmoAproximado(matriz)
 
 //const qtdArestas = (Number(nodes) * (Number(nodes) - 1)) / 2

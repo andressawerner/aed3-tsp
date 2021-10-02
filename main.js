@@ -8,7 +8,7 @@ import transformToMatriz from './assistants/transformToMatriz.js'
 import algoritmoExato from './algoritmoExato.js'
 import algoritmoAproximado from './algoritmoAproximado.js'
 
-const matriz = transformToMatriz(tsp2)
+const matriz = transformToMatriz(tsp5)
 
 //algoritmoExato(matriz)
 

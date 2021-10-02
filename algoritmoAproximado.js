@@ -2,12 +2,13 @@ import selectPath from './assistants/selectPath.js'
 import minTree from './assistants/minTree.js'
 import contornandoTree from './assistants/contornandoTree.js'
 
-const algoritmoAproximado = matriz => {
+const algoritmoAproximado = (matriz) => {
   console.log('---------- ALGORITMO APROXIMADO ----------')
 
   const tree = minTree(matriz)
   console.log(tree)
 
+  const nodes = matriz.length
   const caminhoContornado = contornandoTree(tree)
   //const nodes = matriz.length
   //const maxCombinacoes = factorial(nodes - 1)13andress

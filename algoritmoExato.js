@@ -2,7 +2,7 @@ import factorial from './assistants/factorial.js'
 import combinations from './assistants/combinations.js'
 import selectPath from './assistants/selectPath.js'
 
-const algoritmoExato = matriz => {
+const algoritmoExato = (matriz) => {
   console.log('---------- ALGORITMO EXATO ----------')
 
   const nodes = matriz.length

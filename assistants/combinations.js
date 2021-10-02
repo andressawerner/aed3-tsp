@@ -1,7 +1,10 @@
-function combinations(qtdNodos, factorial) {
+import selectPath from './selectPath.js'
+
+function combinations(qtdNodos, factorial, matriz) {
   const combinations = []
   const combinationsNot = []
   const maxCombinations = factorial
+  let menorCaminho = { value: Number.MAX_VALUE }
 
   const envolved = []
   for (let i = 1; i < qtdNodos; i++) {
@@ -20,6 +23,17 @@ function combinations(qtdNodos, factorial) {
     }
 
     if (!combinationsNot.includes(combination.join(' '))) {
+      const caminho = selectPath([combination.join(' ')], matriz)
+      if (menorCaminho.value > caminho.value) {
+        menorCaminho = caminho
+      }
+      console.log(`Combinações testadas: ${i}`)
+      console.log(`Melhor caminho até o momento: ${menorCaminho.path}`)
+      console.log(
+        `Valor do melhor caminho até o momento: ${menorCaminho.value}
+        `
+      )
+
       combinations.push(combination.join(' '))
       combinationsNot.push(combination.join(' '))
       combination.shift()
@@ -31,7 +45,7 @@ function combinations(qtdNodos, factorial) {
     }
   }
 
-  return combinations
+  return menorCaminho
 }
 
 function getRandomNode(min, max) {

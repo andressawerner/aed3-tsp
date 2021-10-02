@@ -1,7 +1,7 @@
 function selectPath(combinations, map) {
   let path = combinations[0]
   let value = Number.MAX_VALUE
-  combinations.forEach(elem => {
+  combinations.forEach((elem) => {
     let tempValue = 0
     const tempElem = elem.split(' ')
     for (let i = 0; i < tempElem.length; i++) {
@@ -16,7 +16,7 @@ function selectPath(combinations, map) {
     }
     if (tempValue < value) {
       value = tempValue
-      path = elem
+      path = elem + ' 0'
     }
   })
 

@@ -9,8 +9,8 @@ const algoritmoExato = (matriz) => {
   const maxCombinacoes = factorial(nodes - 1)
   //console.log(`Combinações a serem verificadas: ${maxCombinacoes}`)
 
-  const combinacoes = combinations(nodes, maxCombinacoes)
-  const menorCaminho = selectPath(combinacoes, matriz)
+  const menorCaminho = combinations(nodes, maxCombinacoes, matriz)
+  //const menorCaminho = selectPath(combinacoes, matriz)
 
   console.log(`Melhor caminho: ${menorCaminho.path}`)
   console.log(`Valor do melhor caminho: ${menorCaminho.value}`)

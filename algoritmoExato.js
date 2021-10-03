@@ -13,7 +13,7 @@ const algoritmoExato = (matriz) => {
   //const menorCaminho = selectPath(combinacoes, matriz)
 
   console.log(`Melhor caminho: ${menorCaminho.path}`)
-  console.log(`Valor do melhor caminho: ${menorCaminho.value}`)
+  console.log(`Custo do melhor caminho: ${menorCaminho.value}`)
 }
 
 export default algoritmoExato

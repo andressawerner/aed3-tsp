@@ -30,7 +30,7 @@ function combinations(qtdNodos, factorial, matriz) {
       console.log(`Combinações testadas: ${i}`)
       console.log(`Melhor caminho até o momento: ${menorCaminho.path}`)
       console.log(
-        `Valor do melhor caminho até o momento: ${menorCaminho.value}
+        `Custo do melhor caminho até o momento: ${menorCaminho.value}
         `
       )
 

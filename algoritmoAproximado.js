@@ -13,7 +13,7 @@ const algoritmoAproximado = (matriz) => {
   const menorCaminho = calcMenorCaminho(caminhoContornado, tree)
 
   console.log(`Melhor caminho: ${menorCaminho.path.join(' ')}`)
-  console.log(`Valor do melhor caminho: ${menorCaminho.value}`)
+  console.log(`Custo do melhor caminho: ${menorCaminho.value}`)
 }
 
 export default algoritmoAproximado
